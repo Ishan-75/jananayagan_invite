@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { heartConfetti } from "../utils/confetti";
+import { heartConfetti } from "../utils/Confetti";
 import MagneticButton from "./MagneticButton";
 import SectionShell from "./SectionShell";
 
