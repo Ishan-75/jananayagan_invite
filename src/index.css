@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: #0F1115;
+  color: #FFF8F2;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #F4C542;
+  color: #0F1115;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(244, 197, 66, 0.4);
+  border-radius: 10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.font-display { font-family: "Playfair Display", serif; }
+.font-script { font-family: "Caveat", cursive; }
+
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.grain-bg {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.045) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(90deg, #F4C542, #FFF8F2, #F4C542);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.shimmer-sweep {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-sweep::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -150%;
+  width: 60%; height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.18), transparent);
+  animation: sweep 3.2s ease-in-out infinite;
+}
+@keyframes sweep {
+  0% { left: -150%; }
+  60%, 100% { left: 150%; }
+}
+
+.perforation {
+  background-image: radial-gradient(circle, #0F1115 6px, transparent 7px);
+  background-size: 22px 22px;
+  background-position: -11px center;
+}
+
+.btn-magnetic {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.heart-cursor {
+  cursor: pointer;
+}
+
+.stub-notch {
+  -webkit-mask-image: radial-gradient(circle 10px at 0 50%, transparent 10px, black 10.5px),
+    radial-gradient(circle 10px at 100% 50%, transparent 10px, black 10.5px);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
