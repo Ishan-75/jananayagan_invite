@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { fireworksConfetti } from "../utils/confetti";
+import { fireworksConfetti } from "../utils/Confetti";
 import FloatingHearts from "./FloatingHearts";
 import MagneticButton from "./MagneticButton";
 import SectionShell from "./SectionShell";
